@@ -53,7 +53,7 @@ export default function HomePage(): React.JSX.Element {
         {/* About */}
         <section className="mb-16">
           <h2 className="mb-4 text-2xl font-bold text-blue-700">About Us</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="leading-relaxed text-gray-700">
             We are a welcoming community of runners who gather weekly at Crest Lake Park. Whether
             you are new to running or a seasoned marathoner, you will find your pace with us. We
             host two regular weekly runs — a shorter Tuesday morning run and a longer Saturday run
