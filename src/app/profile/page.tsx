@@ -41,9 +41,7 @@ export default async function ProfilePage(): Promise<React.JSX.Element> {
           <div className="space-y-3 border-t border-gray-100 pt-6 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-500">Role</span>
-              <span className="rounded-full bg-blue-50 px-3 py-0.5 font-medium text-blue-700">
-                {user.role}
-              </span>
+              <span className="rounded-full bg-blue-50 px-3 py-0.5 font-medium text-blue-700">{user.role}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Member Since</span>

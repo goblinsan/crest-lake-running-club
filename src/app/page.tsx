@@ -27,12 +27,9 @@ export default function HomePage(): React.JSX.Element {
       <main className="mx-auto max-w-5xl px-6 py-12">
         {/* Hero */}
         <section className="mb-16 rounded-2xl bg-blue-700 px-10 py-16 text-center text-white shadow-lg">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Crest Lake Running Club
-          </h1>
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Crest Lake Running Club</h1>
           <p className="mb-8 text-lg text-blue-100">
-            A community running group based at{' '}
-            <span className="font-semibold">Crest Lake Park, Clearwater, FL</span>
+            A community running group based at <span className="font-semibold">Crest Lake Park, Clearwater, FL</span>
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -54,10 +51,10 @@ export default function HomePage(): React.JSX.Element {
         <section className="mb-16">
           <h2 className="mb-4 text-2xl font-bold text-blue-700">About Us</h2>
           <p className="leading-relaxed text-gray-700">
-            We are a welcoming community of runners who gather weekly at Crest Lake Park. Whether
-            you are new to running or a seasoned marathoner, you will find your pace with us. We
-            host two regular weekly runs — a shorter Tuesday morning run and a longer Saturday run
-            to the beach — plus occasional special events throughout the year.
+            We are a welcoming community of runners who gather weekly at Crest Lake Park. Whether you are new to running
+            or a seasoned marathoner, you will find your pace with us. We host two regular weekly runs — a shorter
+            Tuesday morning run and a longer Saturday run to the beach — plus occasional special events throughout the
+            year.
           </p>
         </section>
 

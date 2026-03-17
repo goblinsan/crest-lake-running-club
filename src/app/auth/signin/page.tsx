@@ -37,11 +37,7 @@ export default function SignInPage(): React.JSX.Element {
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-md">
         <h1 className="mb-6 text-center text-2xl font-bold text-blue-700">Sign In</h1>
 
-        {error && (
-          <div className="mb-4 rounded-lg bg-red-50 p-3 text-center text-sm text-red-600">
-            {error}
-          </div>
-        )}
+        {error && <div className="mb-4 rounded-lg bg-red-50 p-3 text-center text-sm text-red-600">{error}</div>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

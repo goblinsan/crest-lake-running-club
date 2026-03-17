@@ -14,10 +14,7 @@ export default function Navbar(): React.JSX.Element {
           <Link href="/auth/signin" className="hover:text-blue-200">
             Sign In
           </Link>
-          <Link
-            href="/auth/signup"
-            className="rounded-full bg-white px-4 py-1.5 text-blue-700 hover:bg-blue-100"
-          >
+          <Link href="/auth/signup" className="rounded-full bg-white px-4 py-1.5 text-blue-700 hover:bg-blue-100">
             Join Us
           </Link>
         </div>
