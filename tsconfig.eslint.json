@@ -1,8 +1,10 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*", "eslint.config.js"],
-  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "noEmit": true
-  }
+    "noEmit": true,
+    "module": "commonjs",
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*", "eslint.config.js"],
+  "exclude": ["node_modules", "dist", ".next"]
 }

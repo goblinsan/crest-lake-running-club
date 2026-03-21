@@ -30,3 +30,11 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Next.js
+.next/
+out/
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
