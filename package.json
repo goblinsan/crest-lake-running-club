@@ -4,6 +4,7 @@
   "description": "Digital presence management for Crest Lake Running Club",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
