@@ -5,6 +5,7 @@ import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import Navbar from '../../components/Navbar';
 import RsvpButtons from './RsvpButtons';
+import SendRemindersButton from './SendRemindersButton';
 
 const EVENT_TYPE_LABELS: Record<string, string> = {
   WEEKLY_SHORT: 'Weekly Short Run',
@@ -120,7 +121,7 @@ export default async function EventDetailPage({ params }: PageProps): Promise<Re
 
           {/* Admin actions */}
           {sessionUser?.role === 'ADMIN' && (
-            <div className="mt-6 flex gap-3 border-t border-gray-100 pt-6">
+            <div className="mt-6 flex flex-wrap gap-3 border-t border-gray-100 pt-6">
               <Link
                 href={`/admin/events/${event.id}/edit`}
                 className="rounded-lg border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50"
@@ -133,6 +134,7 @@ export default async function EventDetailPage({ params }: PageProps): Promise<Re
               >
                 Manage Attendance
               </Link>
+              <SendRemindersButton eventId={event.id} />
             </div>
           )}
         </div>
