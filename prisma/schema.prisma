@@ -25,6 +25,7 @@ model Event {
   description String?
   date        DateTime
   location    String?
+  distance    String?
   type        String       @default("WEEKLY_SHORT")
   createdAt   DateTime     @default(now())
   attendance  Attendance[]
@@ -33,13 +34,14 @@ model Event {
 }
 
 model Attendance {
-  id        String   @id @default(cuid())
-  userId    String
-  eventId   String
-  status    String   @default("ATTENDING")
-  createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id])
-  event     Event    @relation(fields: [eventId], references: [id])
+  id         String   @id @default(cuid())
+  userId     String
+  eventId    String
+  status     String   @default("ATTENDING")
+  checkedIn  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id])
+  event      Event    @relation(fields: [eventId], references: [id])
 
   @@unique([userId, eventId])
   @@map("attendance")
