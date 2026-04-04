@@ -7,14 +7,16 @@ datasource db {
 }
 
 model User {
-  id         String       @id @default(cuid())
-  name       String
-  email      String       @unique
-  password   String
-  role       String       @default("MEMBER")
-  bio        String?
-  joinedAt   DateTime     @default(now())
-  attendance Attendance[]
+  id               String            @id @default(cuid())
+  name             String
+  email            String            @unique
+  password         String
+  role             String            @default("MEMBER")
+  bio              String?
+  joinedAt         DateTime          @default(now())
+  attendance       Attendance[]
+  discussions      Discussion[]
+  discussionReplies DiscussionReply[]
 
   @@map("users")
 }
@@ -45,4 +47,29 @@ model Attendance {
 
   @@unique([userId, eventId])
   @@map("attendance")
+}
+
+model Discussion {
+  id        String            @id @default(cuid())
+  title     String
+  body      String
+  authorId  String
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+  author    User              @relation(fields: [authorId], references: [id])
+  replies   DiscussionReply[]
+
+  @@map("discussions")
+}
+
+model DiscussionReply {
+  id           String     @id @default(cuid())
+  body         String
+  authorId     String
+  discussionId String
+  createdAt    DateTime   @default(now())
+  author       User       @relation(fields: [authorId], references: [id])
+  discussion   Discussion @relation(fields: [discussionId], references: [id])
+
+  @@map("discussion_replies")
 }

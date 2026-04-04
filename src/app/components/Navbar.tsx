@@ -20,6 +20,12 @@ export default function Navbar(): React.JSX.Element {
           <Link href="/events" className="hover:text-blue-200">
             Events
           </Link>
+          <Link href="/forum" className="hover:text-blue-200">
+            Forum
+          </Link>
+          <Link href="/stats" className="hover:text-blue-200">
+            Stats
+          </Link>
           {user?.role === 'ADMIN' && (
             <Link href="/admin/events" className="hover:text-blue-200">
               Admin
